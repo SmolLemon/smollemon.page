@@ -1,0 +1,108 @@
+baseURL = 'https://smollemon.github.io/'
+languageCode = 'vi-VN'
+title = 'Smol Lemon'
+author = 'Smol Lemon'
+copyright = '© 2025 Smol Lemon'
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = false
+
+[taxonomies]
+  topics = 'topics'
+  tags = 'tags'
+
+[markup]
+  [markup.highlight]
+    style = 'catppuccin-latte'
+    tabWidth = 2
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+  taxonomy = ['html', 'rss']
+  term = ['html', 'rss']
+
+[services]
+  [services.rss]
+    limit = -1
+
+[params]
+	favicon = "/images/chiyo_sisyphus.png"
+  title = "Smol Lemon"
+	description = 'Trang web của Smol Lemon'
+  
+[params.author]
+  name = 'Smol Lemon'
+
+[main]
+	[[menu.main]]
+	name = "Bài viết"
+	url = "/posts/"
+	weight = 10
+
+	[[menu.main]]
+	name = "Dự án"
+	url = "/projects/"
+	weight = 10
+	
+	[[menu.main]]
+	name = "Chủ đề"
+	url = "/topics/"
+	weight = 40
+
+	[[menu.main]]
+	name = "Smol Book"
+	url = "https://smollemon.github.io/SmolBook/title-page.html"
+	weight = 50
+
+	[[menu.main]]
+	name = "Giới thiệu"
+	url = "/posts/about/"
+	weight = 60
+
+	[[menu.social]]
+	name = "Youtube"
+	pre = "youtube"
+	url = "https://www.youtube.com/@SmolLemon"
+	weight = 10
+
+	[[menu.social]]
+	name = "Github"
+	pre = "github"
+	url = "https://www.github.com/SmolLemon"
+	weight = 20
+
+	[[menu.social]]
+	name = "Codeberg"
+	pre = "codeberg"
+	url = "https://www.codeberg.org/SmolLemon"
+	weight = 30
+	
+	[[menu.social]]
+	name = "Smol Book"
+	pre = "smolbook"
+	url = "https://smollemon.github.io/SmolBook/title-page.html"
+	weight = 30
+
+	[[menu.social]]
+	name = "RSS"
+	pre = "rss"
+	url = "/index.xml"
+	weight = 40
+

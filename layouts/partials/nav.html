@@ -1,0 +1,17 @@
+<div class="container-fluid">
+<a aria-label="{{.Site.Title}}" data-discover="true" href="/" class="site-title">{{.Site.Title}}</a>
+<nav>
+    <ul>{{ range .Site.Menus.main }}
+        <li class="hide-before-sm"><a a class="contrast" data-discover="true" href="{{ .URL }}">{{ $text := print .Name | safeHTML }}{{ $text }}</a></li>{{ end }}
+    </ul>
+    <ul class="icons">
+      {{ range.Site.Menus.social -}}
+      <li>
+        <a rel="noopener noreferrer" class="contrast" aria-label="{{ .Name }}" href="{{ .URL }}" target="_blank">
+          {{ partial "icon.html" (dict "icon" .Pre "title" .Name ) }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+</nav>
+</div>

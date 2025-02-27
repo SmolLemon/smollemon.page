@@ -1,0 +1,20 @@
+{{ define "main" }}
+<content>
+<h1>{{ .Title }}</h1>
+<div>
+{{ .Content }}
+</div>
+<p>Theo dõi qua <a href="{{.Permalink}}index.xml">RSS</a>.</p>
+<section style="display: flex; flex-wrap: wrap ">
+{{ range .Data.Terms.Alphabetical }}
+<article style="width: 45%; margin-left: 2%;">
+<div>
+<a class="article-title" href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+<p style="margin: 0;">{{ .Count }} bài viết</p>
+</div>
+</article>
+{{ end }}
+
+</section>
+</content>
+{{ end }}

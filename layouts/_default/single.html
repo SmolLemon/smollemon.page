@@ -1,0 +1,22 @@
+{{ define "main" }}
+<hgroup class="hgroup">
+  {{ range (.GetTerms "topics") }}<p class="chapter"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></p>{{ end }}
+  <h1 class="title"> {{.Title}} </h1>
+  {{ if (not (eq .Description ""))}}<p class="description">{{ .Description }}</p> {{ end }}
+  <p> <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>{{ .Date.Format (default "2 tháng 1, 2006" .Site.Params.dateFormat) }}</time> - {{ printf "%d phút đọc" .ReadingTime }}</p>
+</hgroup>
+<br>
+<content class="contents article">
+{{ if .Params.featured_image }}
+<center class="center-img">
+<img src="{{ .Params.featured_image }}">
+</center>
+{{- end }}
+{{ .Content }}
+</content>
+</main>
+<div class="container">
+  {{ range (.GetTerms "tags") }}
+  <a class="tag" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<content>
+<h1>{{ .Title }}</h1>
+<div>
+{{ .Content }}
+</div>
+<p>Theo dõi qua <a href="{{.Permalink}}index.xml">RSS</a>.</p>
+<section>
+{{ partial "article-list.html" (dict "pages" .Pages) }}
+</section>
+</content>
+{{ end }}

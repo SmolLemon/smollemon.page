@@ -1,0 +1,10 @@
+{{ define "main" }}
+<content>
+{{ .Content }}
+<h1>Các bài viết gần đây</h1>
+<section>
+{{ partial "article-list.html" (dict "pages" (first 5 .Site.RegularPages)) }}
+</section>
+<button class="outline" style="position: right;"><a href="/posts/">Xem thêm</a></button>
+</content>
+{{ end }}
