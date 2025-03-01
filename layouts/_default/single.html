@@ -7,9 +7,11 @@
 </hgroup>
 <br>
 <content class="contents article">
-{{ if .Params.featured_image }}
+{{ with .Params.featured_image }}
+{{ $image := resources.Get . }}
+{{ $image := $image.Process "webp" }}
 <center class="center-img">
-<img src="{{ .Params.featured_image }}">
+<img src="{{ $image.RelPermalink }}" alt="article image">
 </center>
 {{- end }}
 {{ .Content }}

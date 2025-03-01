@@ -2,7 +2,9 @@
 <article style="display: flex;">
 {{ if .Params.featured_image }}
 <div style="padding-right: 20px;">
-	<a href="{{ .Permalink }}"><img src="{{ .Params.featured_image }}" class="article-img" alt="title-img"></a>
+	{{ $image := resources.GetMatch .Params.featured_image }}{{ $image := $image.Process "webp" }}
+	{{ $image := $image.Resize "x288" }}
+	<a href="{{ .Permalink }}"><img src="{{ $image.RelPermalink }}" class="article-img" alt="title-img"></a>
 </div>
 {{- end }}
 <div>

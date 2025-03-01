@@ -49,7 +49,7 @@ enableRobotsTXT = true
 # Params Configuration
 
 [params]
-  favicon = "/images/chiyo_sisyphus.png"
+  favicon = "/images/favicon.png"
   title = "Smol Lemon"
   description = 'Trang web của Smol Lemon'
   

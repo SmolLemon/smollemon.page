@@ -43,7 +43,7 @@
 }
 
 iframe{
-  border-radius: 15px;
+  border-radius: var(--pico-border-radius);
   margin-bottom: 1rem;
 }
 
@@ -55,8 +55,8 @@ iframe{
   margin-top: 0.5rem;
   font-size: 1.2rem;
 }
-.article > center > img{
-  border-radius: 15px;
+content > center > img{
+  border-radius: var(--pico-border-radius);
 }
 
 .site-title{
@@ -67,7 +67,7 @@ iframe{
 
 content > p > img {
   margin-bottom: 1rem;
-  border-radius: 15px;
+  border-radius: var(--pico-border-radius);
   display: block;
   margin-left: auto;
   margin-right: auto;
