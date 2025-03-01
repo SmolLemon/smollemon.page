@@ -2,7 +2,7 @@
 <article style="display: flex;">
 {{ if .Params.featured_image }}
 <div style="padding-right: 20px;">
-	<a href="{{ .Permalink }}"><img src="{{ .Params.featured_image }}" class="article-img"></a>
+	<a href="{{ .Permalink }}"><img src="{{ .Params.featured_image }}" class="article-img" alt="title-img"></a>
 </div>
 {{- end }}
 <div>

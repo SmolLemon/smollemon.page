@@ -10,5 +10,7 @@ topics = [
 ]
 featured_image = '{{ .Site.Params.favicon }}'
 draft = true
+[params]
+	math = false
 +++
 

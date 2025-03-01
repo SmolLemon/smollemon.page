@@ -4,7 +4,6 @@ date = 2025-02-27T02:00:00+07:00
 description = 'OK! ☆'
 tags = [
 	"Blue Archive",
-	"Misono Mika",
 	"Web",
 ]
 topics = [

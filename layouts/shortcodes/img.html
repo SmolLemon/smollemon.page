@@ -1,0 +1,7 @@
+{{ $image := resources.GetMatch (.Get "src") }}
+{{ $sup := .Get "sup" }}
+{{ $alt := .Get "alt" }}
+<center class="center-img">
+<img src="{{ $image }}" alt="{{ $alt }}">
+{{with $sup}}<p><sup>{{$sup}}</sup></p>{{end}}
+</center>
