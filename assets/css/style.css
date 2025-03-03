@@ -44,7 +44,6 @@
 
 iframe{
   border-radius: var(--pico-border-radius);
-  margin-bottom: 1rem;
 }
 
 .center-img{
@@ -75,7 +74,20 @@ content > p > img {
 }
 
 @media (max-width: 768px) {
-  .icons{
+  .menu-icons{
     display: none;
   }
+}
+
+.pagination{
+    display: inline-block;
+}
+
+.pagination > li {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.pagination > .active > a {
+  text-decoration: underline;
 }

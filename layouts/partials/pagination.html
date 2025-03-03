@@ -1,0 +1,118 @@
+{{- $validFormats := slice "atcoder" "terse" }}
+
+{{- $msg1 := "When passing a map to the internal pagination template, one of the elements must be named 'page', and it must be set to the context of the current page." }}
+{{- $msg2 := "The 'format' specified in the map passed to the internal pagination template is invalid. Valid choices are: %s." }}
+
+{{- $page := . }}
+{{- $format := "atcoder" }}
+
+{{- if reflect.IsMap . }}
+  {{- with .page }}
+    {{- $page = . }}
+  {{- else }}
+    {{- errorf $msg1 }}
+  {{- end }}
+  {{- with .format }}
+    {{- $format = lower . }}
+  {{- end }}
+{{- end }}
+
+{{- if in $validFormats $format }}
+  {{- if gt $page.Paginator.TotalPages 1 }}
+    <ul class="pagination pagination-{{ $format }}">
+      {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
+    </ul>
+  {{- end }}
+{{- else }}
+  {{- errorf $msg2 (delimit $validFormats ", ") }}
+{{- end -}}
+
+{{/* Format: Atcoder */}}
+{{/* --------------------------------------------------------------------- */}}
+{{- define "partials/inline/pagination/atcoder" }}
+  {{- with .Paginator }}
+    {{- $currentPageNumber := .PageNumber }}
+
+    {{- $start := 1 }}
+    {{- $end := .TotalPages }}
+
+    {{- if eq $.Paginator.PageNumber $start }}
+    <li class="active">
+      <a>{{ $start }}</a>
+    </li>
+    {{- else }}
+    <li>
+      <a href="{{ (index $.Paginator.Pagers (sub $start 1)).URL }}">{{ $start }}</a>
+    </li>
+    {{- end }}
+
+    {{ $start := math.Max 2 (sub .PageNumber 2) }}
+    
+    {{- range $p := seq 20 1}}
+      {{$pow2 := math.Pow 2 $p }}
+      {{$pow2 := int $pow2 }}
+      {{$k := sub $start $pow2 }}
+      {{$k := int $k }}
+      {{- if gt $k 2 }}
+        {{- if eq $.Paginator.PageNumber $k }}
+        <li class="active">
+          <a>{{ $k }}</a>
+        </li>
+        {{ else }}
+        <li>
+          <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}">{{ $k }}</a>
+        </li>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+
+    {{ $end := math.Min (sub .TotalPages 1) (add .PageNumber 2) }}
+
+    {{- if le $start $end}}
+      {{- range $k := seq $start $end }}
+        {{- if eq $.Paginator.PageNumber $k }}
+        <li class="active">
+          <a>{{ $k }}</a>
+        </li>
+        {{- else }}
+        <li>
+          <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}">{{ $k }}</a>
+        </li>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+
+    {{- $start := $end }}
+    {{- $end := .TotalPages }}
+
+    {{- range $p := seq 1 20}}
+      {{$pow2 := math.Pow 2 $p }}
+      {{$pow2 := int $pow2 }}
+      {{$k := add $start $pow2 }}
+      {{$k := int $k }}
+      {{- if lt $k $end }}
+        {{- if eq $.Paginator.PageNumber $k }}
+        <li class="active">
+          <a>{{ $k }}</a>
+        </li>
+        {{ else }}
+        <li>
+          <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}">{{ $k }}</a>
+        </li>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+
+    {{- $start := 1 }}
+
+    {{- if eq $.Paginator.PageNumber $end }}
+    <li class="active">
+      <a>{{ $end }}</a>
+    </li>
+    {{- else }}
+    <li>
+      <a href="{{ (index $.Paginator.Pagers (sub $end 1)).URL }}">{{ $end }}</a>
+    </li>
+    {{- end }}
+  {{- end }}
+{{- end -}}

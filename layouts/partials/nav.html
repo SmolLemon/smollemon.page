@@ -4,7 +4,7 @@
     <ul>{{ range .Site.Menus.main }}
         <li class="hide-before-sm"><a a class="contrast" data-discover="true" href="{{ .URL }}">{{ $text := print .Name | safeHTML }}{{ $text }}</a></li>{{ end }}
     </ul>
-    <ul class="icons">
+    <ul class="menu-icons icons">
       {{ range.Site.Menus.social -}}
       <li>
         <a rel="noopener noreferrer" class="contrast" aria-label="{{ .Name }}" href="{{ .URL }}" target="_blank">

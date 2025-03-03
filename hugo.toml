@@ -15,8 +15,6 @@ enableRobotsTXT = true
     disable = true
   [privacy.instagram]
     disable = true
-  [privacy.twitter]
-    disable = true
   [privacy.vimeo]
     disable = true
   [privacy.youtube]
@@ -46,10 +44,15 @@ enableRobotsTXT = true
     [markup.goldmark.renderer]
       unsafe = true
 
+# Paginator
+
+[pagination]
+  pagerSize = 25
+
 # Params Configuration
 
 [params]
-  favicon = "/images/favicon.png"
+  favicon = "/images/chiyo_sisyphus.png"
   title = "Smol Lemon"
   description = 'Trang web của Smol Lemon'
   
@@ -81,7 +84,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
   name = "Smol Book"
-  url = "https://smollemon.github.io/SmolBook/title-page.html"
+  url = "https://book.smollemon.page"
   weight = 50
 
   [[menu.main]]
@@ -110,7 +113,7 @@ enableRobotsTXT = true
   [[menu.social]]
   name = "Smol Book"
   pre = "smolbook"
-  url = "https://smollemon.github.io/SmolBook/title-page.html"
+  url = "https://book.smollemon.page"
   weight = 40
 
   [[menu.social]]
@@ -118,4 +121,3 @@ enableRobotsTXT = true
   pre = "rss"
   url = "/index.xml"
   weight = 50
-
