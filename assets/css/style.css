@@ -40,6 +40,7 @@
   height: 144px;
   width: 144px; 
   object-fit: cover;
+  border-radius: var(--pico-border-radius);
 }
 
 iframe{
@@ -79,15 +80,32 @@ content > p > img {
   }
 }
 
-.pagination{
-    display: inline-block;
+.pagination ul {
+  padding: 0;
 }
 
-.pagination > li {
+.pagination ul li {
   display: inline-block;
   padding: 5px 10px;
 }
 
-.pagination > .active > a {
-  text-decoration: underline;
+.pagination li{
+  box-sizing: border-box;
+}
+
+.pagination ul li a {
+  padding: 3px 10px;
+  display: block;
+  color: #555;
+  min-width: 40px;
+  min-height: 40px;
+  line-height: 32px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: var(--pico-border-radius);
+}
+
+.pagination ul li.active a {
+  color: #fefefe;
+  background-color: var(--pico-color);
 }

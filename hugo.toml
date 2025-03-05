@@ -47,7 +47,7 @@ enableRobotsTXT = true
 # Paginator
 
 [pagination]
-  pagerSize = 25
+  pagerSize = 20
 
 # Params Configuration
 

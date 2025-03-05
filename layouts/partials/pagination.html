@@ -19,15 +19,19 @@
 
 {{- if in $validFormats $format }}
   {{- if gt $page.Paginator.TotalPages 1 }}
-    <ul class="pagination pagination-{{ $format }}">
-      {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
-    </ul>
+    <div class="pagination pagination-{{ $format }}">
+      <ul>
+        {{- partial (printf "partials/inline/pagination/%s" $format) $page }}
+      </ul>
+    </div>
   {{- end }}
 {{- else }}
   {{- errorf $msg2 (delimit $validFormats ", ") }}
 {{- end -}}
 
 {{/* Format: Atcoder */}}
+{{/* [1, ..., CurrentPage - 8, CurrentPage - 6, CurrentPage - 4, CurrentPage - 2, CurrentPage - 1, CurrentPage,  */}}
+{{/* CurrentPage + 1, CurrentPage + 2, CurrentPage + 4, CurrentPage + 6, CurrentPage + 10, ... , TotalPages] */}}
 {{/* --------------------------------------------------------------------- */}}
 {{- define "partials/inline/pagination/atcoder" }}
   {{- with .Paginator }}
