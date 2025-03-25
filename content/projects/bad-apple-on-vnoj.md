@@ -3,13 +3,11 @@ title = 'Bad Apple on VNOJ'
 date = 2025-02-27T01:00:00+07:00
 description = 'Táo hư trên VNOJ'
 tags = [
-	"Bad Apple",
-	"Code",
-	"Hướng dẫn",
+	'Bad Apple',
+	'Code',
+	'Hướng dẫn',
 ]
-topics = [
-	"Dự án vô tri",
-]
+topics = 'Dự án vô tri'
 featured_image = '/images/badapple.png'
 draft = false
 +++
@@ -28,7 +26,7 @@ Việc đầu tiên mình làm chính là tìm nơi để chơi Bad Apple.
 
 Mình gặp khó trong việc chọn nhưng một lúc sau mình đã có một khoảnh khắc Eureka - Chơi Bad Apple trên phần bài nộp của VNOJ!
 
-Các pixel màu trắng sẽ là <strong><span style="color:Green">AC</span></strong>, màu đen là <strong><span style="color:Red">WA</span></strong>, số lượng testcase và số lượng **AC**, **WA** mỗi testcase hiển thị lần lượt là chiều rộng và chiều dài của khung Bad Apple và Boom!!! - Một Video Bad Apple hoàn chỉnh!
+Các pixel màu trắng sẽ là <strong><span style="color:Green;">AC</span></strong>, màu đen là <strong><span style="color:Red;">WA</span></strong>, số lượng testcase và số lượng **AC**, **WA** mỗi testcase hiển thị lần lượt là chiều rộng và chiều dài của khung Bad Apple và Boom!!! - Một Video Bad Apple hoàn chỉnh!
 
 Bước thứ hai, tìm bài có số lượng testcase phù hợp.
 

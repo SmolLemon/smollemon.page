@@ -39,9 +39,21 @@
 .article-img{
   height: 144px;
   width: 144px; 
+  min-height: 144px;
+  min-width: 144px;
   object-fit: cover;
   border-radius: var(--pico-border-radius);
 }
+
+@media (max-width: 576px) {
+  .article-img{
+    height: 120px;
+    width: 120px; 
+    min-height: 120px;
+    min-width: 120px;
+  }
+}
+
 
 iframe{
   border-radius: var(--pico-border-radius);

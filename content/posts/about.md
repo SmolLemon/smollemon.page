@@ -3,15 +3,14 @@ title = 'Giới thiệu'
 date = 2025-02-27T00:00:00+07:00
 description = 'Bài viết đầu tiên giới thiệu về trang web của Smol Lemon'
 tags = [
-	"Blog",
-	"DIY",
-	"Hugo",
-	"Pico",
-	"Web",
-]
-topics = [
+	'Blog',
+	'DIY',
+	'Hugo',
+	'Pico',
 	'Web',
 ]
+topics = 'Web'
+
 featured_image = '/images/chiyo_sisyphus.png'
 draft = false
 +++

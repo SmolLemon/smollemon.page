@@ -8,17 +8,16 @@ copyright = '© 2025 Smol Lemon'
 disableHugoGeneratorInject = true
 enableRobotsTXT = true
 
-[privacy]
-  [privacy.disqus]
-    disable = true
-  [privacy.googleAnalytics]
-    disable = true
-  [privacy.instagram]
-    disable = true
-  [privacy.vimeo]
-    disable = true
-  [privacy.youtube]
-    disable = false
+# Params Configuration
+
+[params]
+  favicon = "/images/chiyo_sisyphus.png"
+  title = "Smol Lemon"
+  description = 'Trang web của Smol Lemon'
+  [params.author]
+    name = 'Smol Lemon'
+
+# Configurations
 
 [taxonomies]
   topics = 'topics'
@@ -34,6 +33,18 @@ enableRobotsTXT = true
   [services.rss]
     limit = -1
 
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = false
+
 # Markup Configuration
 
 [markup]
@@ -48,16 +59,6 @@ enableRobotsTXT = true
 
 [pagination]
   pagerSize = 20
-
-# Params Configuration
-
-[params]
-  favicon = "/images/chiyo_sisyphus.png"
-  title = "Smol Lemon"
-  description = 'Trang web của Smol Lemon'
-  
-[params.author]
-  name = 'Smol Lemon'
 
 # Menu Configuration
 
