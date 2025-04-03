@@ -65,12 +65,12 @@ enableRobotsTXT = true
 [main]
   [[menu.main]]
   name = "Bài viết"
-  url = "/posts/"
+  url = "/post/"
   weight = 10
 
   [[menu.main]]
   name = "Dự án"
-  url = "/projects/"
+  url = "/project/"
   weight = 20
 
   [[menu.main]]
