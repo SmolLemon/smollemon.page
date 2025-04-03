@@ -2,14 +2,16 @@
 title = 'Bad Apple on VNOJ'
 date = 2025-02-27T01:00:00+07:00
 description = 'Táo hư trên VNOJ'
-tags = [
+tag = [
 	'Bad Apple',
 	'Code',
 	'Hướng dẫn',
 ]
-topics = 'Dự án vô tri'
+topic = 'Dự án vô tri'
+[params]
+	article = true
+	math = false
 featured_image = '/images/badapple.png'
-draft = false
 +++
 
 Dự án được mình làm ra vào khoảng thời gian trước kì thi HSGQG 2024 khoảng 1 - 2 tuần. 
@@ -63,9 +65,7 @@ Bước cuối cùng chính là quay video và đăng lên Youtube.
 
 Bad apple chạy với 30 fps, và trong lúc chạy thử thì trình duyệt trên máy mình đã load không kịp theo thời gian thực (rất là lag) để quay lên mình quyết định giảm xuống còn 10fps, và edit video chạy x3 tốc độ.
 
-Thành quả cuối cùng:
-
-{{< youtube mzbvxjmd21Q >}}
+Thành quả cuối cùng: <https://www.youtube.com/watch?v=mzbvxjmd21Q>
 
 Tổng kết:
 

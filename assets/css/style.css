@@ -21,7 +21,7 @@
   padding: 5px 10px;
   font-size: 0.9em;
   border-radius: 3px;
-  background: var(--pico-mark-background-color);
+  background: var(--pico-primary-underline);
   line-height: 1.5rem;
   margin: 0 5px 5px 0;
 }
@@ -86,7 +86,7 @@ content > p > img {
   width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .menu-icons{
     display: none;
   }
@@ -120,4 +120,8 @@ content > p > img {
 .pagination ul li.active a {
   color: #fefefe;
   background-color: var(--pico-color);
+}
+
+.menu{
+  flex-wrap: wrap;
 }

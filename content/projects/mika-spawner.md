@@ -2,13 +2,15 @@
 title = 'Mika Spawner'
 date = 2025-02-27T02:00:00+07:00
 description = 'OK! ☆'
-tags = [
+tag = [
 	'Blue Archive',
 	'Web',
 ]
-topics = 'Dự án vô tri'
+topic = 'Dự án vô tri'
+[params]
+	article = true
+	math = false
 featured_image = '/images/oke.png'
-draft = false
 +++
 
 Một hôm nọ mình tìm được một trang web mang tên [Koyuki-clicker](https://zerofps-hk.github.io/koyuki-clicker/).

@@ -20,8 +20,8 @@ enableRobotsTXT = true
 # Configurations
 
 [taxonomies]
-  topics = 'topics'
-  tags = 'tags'
+  topics = 'topic'
+  tags = 'tag'
 
 [outputs]
   home = ['html', 'rss']
@@ -43,7 +43,7 @@ enableRobotsTXT = true
   [privacy.vimeo]
     disable = true
   [privacy.youtube]
-    disable = false
+    disable = true
 
 # Markup Configuration
 
@@ -74,24 +74,19 @@ enableRobotsTXT = true
   weight = 20
 
   [[menu.main]]
-  name = "Tags"
-  url = "/tags/"
+  name = "Tag"
+  url = "/tag/"
   weight = 30
   
   [[menu.main]]
   name = "Chủ đề"
-  url = "/topics/"
+  url = "/topic/"
   weight = 40
-
-  [[menu.main]]
-  name = "Smol Book"
-  url = "https://book.smollemon.page"
-  weight = 50
 
   [[menu.main]]
   name = "Giới thiệu"
   url = "/posts/about/"
-  weight = 60
+  weight = 50
 
   [[menu.social]]
   name = "Youtube"

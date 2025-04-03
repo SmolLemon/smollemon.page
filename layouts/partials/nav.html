@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <a aria-label="{{.Site.Title}}" data-discover="true" href="/" class="site-title">{{.Site.Title}}</a>
 <nav>
-    <ul>{{ range .Site.Menus.main }}
+    <ul class="menu">{{ range .Site.Menus.main }}
         <li class="hide-before-sm"><a a class="contrast" data-discover="true" href="{{ .URL }}">{{ $text := print .Name | safeHTML }}{{ $text }}</a></li>{{ end }}
     </ul>
     <ul class="menu-icons icons">

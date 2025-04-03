@@ -7,6 +7,7 @@
 <p>Theo dõi qua <a href="{{.Permalink}}index.xml">RSS</a>.</p>
 <section>
 {{ range (.Paginate .Pages).Pages }}
+{{if .Params.article}}
 <article style="display: flex;">
 {{ if .Params.featured_image }}
 <div style="padding-right: 20px;">
@@ -17,16 +18,17 @@
 <div>
 {{ $readingTime := div (float .ReadingTime) 1}}
 {{ $readingTime = math.Ceil $readingTime }}
-{{ $topic := index (.GetTerms "topics") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a> - {{ printf "%d phút đọc" (int $readingTime) }}</p>
+{{ $topic := index (.GetTerms "topic") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a> - {{ printf "%d phút đọc" (int $readingTime) }}</p>
 <a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
 <p class="article-des">{{ .Description }} </p>
 <p style="margin: 0;">
 <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-{{ .Date.Format (default "2 tháng 1, 2006" .Site.Params.dateFormat) }}
+{{ .Date.Format (default "2-1-2006" .Site.Params.dateFormat) }}
 </time>
 </p>
 </div>
 </article>{{ end }}
+{{- end }}
 </section>
 <section>
 {{ partial "pagination.html" .}}

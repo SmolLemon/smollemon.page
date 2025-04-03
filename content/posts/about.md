@@ -2,17 +2,18 @@
 title = 'Giới thiệu'
 date = 2025-02-27T00:00:00+07:00
 description = 'Bài viết đầu tiên giới thiệu về trang web của Smol Lemon'
-tags = [
+tag = [
 	'Blog',
 	'DIY',
 	'Hugo',
 	'Pico',
 	'Web',
 ]
-topics = 'Web'
-
+topic = 'Web'
+[params]
+	article = true
+	math = false
 featured_image = '/images/chiyo_sisyphus.png'
-draft = false
 +++
 
 Chào mừng đến với trang web của mình. Mình là Smol Lemon!

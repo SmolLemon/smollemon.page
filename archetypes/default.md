@@ -2,13 +2,13 @@
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = {{ .Date }}
 description = ''
-tags = [
+tag = [
 	'',
 ]
-topics = ''
+topic = ''
 [params]
+	article = true
 	math = false
 featured_image = '{{ .Site.Params.favicon }}'
-draft = true
 +++
 

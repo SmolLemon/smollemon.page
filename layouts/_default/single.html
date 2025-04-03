@@ -1,12 +1,13 @@
 {{ define "main" }}
 <hgroup class="hgroup">
-  {{ $topic := index (.GetTerms "topics") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a></p>
-  <h1 class="title"> {{.Title}} </h1>
-  {{ if (not (eq .Description ""))}}<p class="description">{{ .Description }}</p> {{ end }}
-  <p> <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>{{ .Date.Format (default "2 tháng 1, 2006" .Site.Params.dateFormat) }}</time> - {{ printf "%d phút đọc" .ReadingTime }}</p>
+  {{if .Params.article}}{{ $topic := index (.GetTerms "topic") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a></p> {{ end }}
+  <h1 class="title">{{.Title}}</h1>
+  {{if .Params.article}}{{ if (not (eq .Description ""))}}<p class="description">{{ .Description }}</p> {{ end }}{{ end }}
+  {{if .Params.article}}<p><time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>{{ .Date.Format (default "2-1-2006" .Site.Params.dateFormat) }}</time> - {{ printf "%d phút đọc" .ReadingTime }}</p>{{ end }}
 </hgroup>
 <br>
 <content class="contents article">
+{{if .Params.article}}
 {{ with .Params.featured_image }}
 {{ $image := resources.Get . }}
 {{ $image := $image.Process "webp" }}
@@ -14,12 +15,13 @@
 <img src="{{ $image.RelPermalink }}" alt="article image">
 </center>
 <br>
-{{- end }}
+{{ end }}
+{{ end }}
 {{ .Content }}
 </content>
-</main>
-<div class="container">
-  {{ range (.GetTerms "tags") }}
-  <a class="tag" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-  {{ end }}
+{{if .Params.article}}
+<div class="container">{{ range (.GetTerms "tag") }}
+  <a class="tag" href="{{ .Permalink }}">{{ .LinkTitle }}</a>{{ end }}
+</div>
+{{ end }}
 {{ end }}
