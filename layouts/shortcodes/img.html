@@ -1,4 +1,5 @@
-{{ $image := resources.GetMatch (.Get "src") }}{{ $sup := .Get "sup" }}{{ $alt := .Get "alt" }}{{ $image := $image.Process "webp" }}
+<!-- usage: img src="/path/to/img" alt="[text]" sup="[text]" process="[process]" -->
+{{ $image := resources.GetMatch (.Get "src") }}{{ $sup := .Get "sup" }}{{ $alt := .Get "alt" }}{{ $process := .Get "process" }}{{ $image := $image.Process $process }}
 <center class="center-img">
 <img src="{{ $image.RelPermalink }}" alt="{{ $alt }}">
 {{with $sup}}<p><sup>{{$sup}}</sup></p>{{end}}

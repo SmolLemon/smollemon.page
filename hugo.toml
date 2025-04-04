@@ -84,9 +84,14 @@ enableRobotsTXT = true
   weight = 40
 
   [[menu.main]]
-  name = "Giới thiệu"
-  url = "/posts/about/"
+  name = "Liên lạc"
+  url = "/contact/"
   weight = 50
+
+  [[menu.main]]
+  name = "Giới thiệu"
+  url = "/post/about/"
+  weight = 60
 
   [[menu.social]]
   name = "Youtube"
@@ -113,7 +118,19 @@ enableRobotsTXT = true
   weight = 40
 
   [[menu.social]]
+  name = "Matrix"
+  pre = "matrix"
+  url = "https://matrix.to/#/@smollemon:matrix.org"
+  weight = 50
+
+  [[menu.social]]
+  name = "XMPP"
+  pre = "xmpp"
+  url = "xmpp:smollemon@xmpp.jp"
+  weight = 60
+
+  [[menu.social]]
   name = "RSS"
   pre = "rss"
   url = "/index.xml"
-  weight = 50
+  weight = 70

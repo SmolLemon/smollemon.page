@@ -21,14 +21,13 @@
 {{ $topic := index (.GetTerms "topic") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a> - {{ printf "%d phút đọc" (int $readingTime) }}</p>
 <a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
 <p class="article-des">{{ .Description }} </p>
-<p style="margin: 0;">
+<p style="margin: 0; font-size: 0.9rem;">
 <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
 {{ .Date.Format (default "2-1-2006" .Site.Params.dateFormat) }}
 </time>
 </p>
 </div>
-</article>{{ end }}
-{{- end }}
+</article>{{ end }}{{ end }}
 </section>
 <section>
 {{ partial "pagination.html" .}}

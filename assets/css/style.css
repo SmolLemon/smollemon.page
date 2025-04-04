@@ -33,7 +33,7 @@
 }
 
 .article-des{
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .article-img{
@@ -51,6 +51,9 @@
     width: 120px; 
     min-height: 120px;
     min-width: 120px;
+  }
+  .article-des{
+    margin-bottom: 3px;
   }
 }
 

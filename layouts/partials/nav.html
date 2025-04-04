@@ -7,7 +7,7 @@
     <ul class="menu-icons icons">
       {{ range.Site.Menus.social -}}
       <li>
-        <a rel="noopener noreferrer" class="contrast" aria-label="{{ .Name }}" href="{{ .URL }}" target="_blank">
+        <a rel="noopener noreferrer" class="contrast" aria-label="{{ .Name }}" href="{{ .URL | safeURL }}" target="_blank">
           {{ partial "icon.html" (dict "icon" .Pre "title" .Name ) }}
         </a>
       </li>

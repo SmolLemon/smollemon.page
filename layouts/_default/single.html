@@ -2,8 +2,8 @@
 <hgroup class="hgroup">
   {{if .Params.article}}{{ $topic := index (.GetTerms "topic") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a></p> {{ end }}
   <h1 class="title">{{.Title}}</h1>
-  {{if .Params.article}}{{ if (not (eq .Description ""))}}<p class="description">{{ .Description }}</p> {{ end }}{{ end }}
-  {{if .Params.article}}<p><time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>{{ .Date.Format (default "2-1-2006" .Site.Params.dateFormat) }}</time> - {{ printf "%d phút đọc" .ReadingTime }}</p>{{ end }}
+  {{if .Params.article}}{{ if (not (eq .Description ""))}}<p class="description"><i>{{ .Description }}</i></p>{{ end }}{{ end }}
+  {{if .Params.article}}<p><small><i><time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>{{ .Date.Format (default "2-1-2006" .Site.Params.dateFormat) }}</time> - {{ printf "%d phút đọc" .ReadingTime }}</small></i></p>{{ end }}
 </hgroup>
 <br>
 <content class="contents article">
