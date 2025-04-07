@@ -5,4 +5,4 @@ description = 'Các dự án'
 featured_image = '/images/chiyo_sisyphus.png'
 +++
 
-Trang này bao gồm các bài viết liên quan đến những dự án mà mình đã làm.
+Trang này tổng hợp các bài viết liên quan đến những dự án mà mình đã làm.

@@ -50,9 +50,9 @@
     </li>
     {{- end }}
 
-    {{ $start := math.Max 2 (sub .PageNumber 2) }}
+    {{ $start := .PageNumber }}
     
-    {{- range $p := seq 20 1}}
+    {{- range $p := seq 20 2}}
       {{$pow2 := math.Pow 2 $p }}
       {{$pow2 := int $pow2 }}
       {{$k := sub $start $pow2 }}
@@ -70,6 +70,7 @@
       {{- end }}
     {{- end }}
 
+    {{ $start := math.Max 2 (sub .PageNumber 2) }}
     {{ $end := math.Min (sub .TotalPages 1) (add .PageNumber 2) }}
 
     {{- if le $start $end}}
@@ -86,10 +87,10 @@
       {{- end }}
     {{- end }}
 
-    {{- $start := $end }}
+    {{- $start := .PageNumber }}
     {{- $end := .TotalPages }}
 
-    {{- range $p := seq 1 20}}
+    {{- range $p := seq 2 20}}
       {{$pow2 := math.Pow 2 $p }}
       {{$pow2 := int $pow2 }}
       {{$k := add $start $pow2 }}

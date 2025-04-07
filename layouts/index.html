@@ -1,5 +1,27 @@
 {{ define "main" }}
 <content>
+<center>
+<div>
+	{{ $avatar := resources.GetMatch .Site.Params.Avatar }}{{ $avatar := $avatar.Process "resize x256" }}{{ $avatar := $avatar.Process "webp" }}
+	<img src="{{ $avatar.RelPermalink }}" alt="Avatar" class="avatar">
+	<h1>{{.Site.Title}}</h1>
+	<p>Xin chào! Mình là {{ .Params.Author }}! Rất vui được gặp bạn (≧∇≦) </p>
+</div><!-- 
+<div>
+	<nav style="justify-content: center;">
+	    <ul class="menu-icons icons">
+	      {{ range.Site.Menus.social -}}
+	      <li>
+	        <a rel="noopener noreferrer" class="contrast" aria-label="{{ .Name }}" href="{{ .URL | safeURL }}" target="_blank">
+	          {{ partial "icon.html" (dict "icon" .Pre "title" .Name ) }}
+	        </a>
+	      </li>
+	      {{ end }}
+	    </ul>
+	</nav>
+</div> -->
+</center>
+<br>
 {{ .Content }}
 <h1>Các bài viết gần đây</h1>
 <section>

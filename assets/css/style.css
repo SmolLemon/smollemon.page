@@ -55,6 +55,9 @@
   .article-des{
     margin-bottom: 3px;
   }
+  .taxonomies{
+    width: 90% !important;
+  }
 }
 
 
@@ -127,4 +130,13 @@ content > p > img {
 
 .menu{
   flex-wrap: wrap;
+}
+
+.taxonomies{
+  width: 45%; margin-left: 2%;
+}
+
+.avatar{
+  border-radius: 50%;
+  margin: 1rem;
 }

@@ -6,7 +6,7 @@ tag = [
 	'Blog',
 	'DIY',
 	'Hugo',
-	'Pico',
+	'PicoCSS',
 	'Web',
 ]
 topic = 'Web'

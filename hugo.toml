@@ -12,6 +12,7 @@ enableRobotsTXT = true
 
 [params]
   favicon = "/images/chiyo_sisyphus.png"
+  avatar = "/images/chiyo_sisyphus.png"
   title = "Smol Lemon"
   description = 'Trang web của Smol Lemon'
   [params.author]
@@ -38,12 +39,21 @@ enableRobotsTXT = true
     disable = true
   [privacy.googleAnalytics]
     disable = true
+    respectDoNotTrack = true
   [privacy.instagram]
     disable = true
+    simple = true
   [privacy.vimeo]
     disable = true
-  [privacy.youtube]
+    enableDNT = true
+    simple = true
+  [privacy.x]
     disable = true
+    enableDNT = true
+    simple = true
+  [privacy.youTube]
+    disable = true
+    privacyEnhanced = true
 
 # Markup Configuration
 
@@ -118,19 +128,25 @@ enableRobotsTXT = true
   weight = 40
 
   [[menu.social]]
+  name = "Mail"
+  pre = "mail"
+  url = "mailto:contact@smollemon.page"
+  weight = 50
+
+  [[menu.social]]
   name = "Matrix"
   pre = "matrix"
   url = "https://matrix.to/#/@smollemon:matrix.org"
-  weight = 50
+  weight = 60
 
   [[menu.social]]
   name = "XMPP"
   pre = "xmpp"
   url = "xmpp:smollemon@xmpp.jp"
-  weight = 60
+  weight = 70
 
   [[menu.social]]
   name = "RSS"
   pre = "rss"
   url = "/index.xml"
-  weight = 70
+  weight = 80
