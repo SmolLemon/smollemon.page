@@ -21,7 +21,7 @@ enableRobotsTXT = true
 # Configurations
 
 [taxonomies]
-  topics = 'topic'
+  topics = 'danh-muc'
   tags = 'tag'
 
 [outputs]
@@ -64,6 +64,8 @@ enableRobotsTXT = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.goldmark.parser]
+    wrapStandAloneImageWithinParagraph = false
 
 # Paginator
 
@@ -74,13 +76,13 @@ enableRobotsTXT = true
 
 [main]
   [[menu.main]]
-  name = "Bài viết"
-  url = "/post/"
+  name = "Bài đăng"
+  url = "/bai-dang/"
   weight = 10
 
   [[menu.main]]
   name = "Dự án"
-  url = "/project/"
+  url = "/du-an/"
   weight = 20
 
   [[menu.main]]
@@ -89,8 +91,8 @@ enableRobotsTXT = true
   weight = 30
   
   [[menu.main]]
-  name = "Chủ đề"
-  url = "/topic/"
+  name = "Danh mục"
+  url = "/danh-muc/"
   weight = 40
 
   [[menu.main]]
@@ -100,7 +102,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
   name = "Giới thiệu"
-  url = "/post/about/"
+  url = "/bai-dang/gioi-thieu/"
   weight = 60
 
   [[menu.social]]

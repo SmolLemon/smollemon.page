@@ -6,7 +6,7 @@ tag = [
 	'Blue Archive',
 	'Web',
 ]
-topic = 'Dự án vô tri'
+danh-muc = 'Dự án vô tri'
 [params]
 	article = true
 	math = false

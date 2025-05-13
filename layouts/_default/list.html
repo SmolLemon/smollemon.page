@@ -18,7 +18,7 @@
 <div>
 {{ $readingTime := div (float .ReadingTime) 1}}
 {{ $readingTime = math.Ceil $readingTime }}
-{{ $topic := index (.GetTerms "topic") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a> - {{ printf "%d phút đọc" (int $readingTime) }}</p>
+{{ $topic := index (.GetTerms "danh-muc") 0}}<p class="chapter"><a href="{{ $topic.Permalink }}">{{ $topic.LinkTitle }}</a> - {{ printf "%d phút đọc" (int $readingTime) }}</p>
 <a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
 <p class="article-des">{{ .Description }} </p>
 <p style="margin: 0; font-size: 0.9rem;">

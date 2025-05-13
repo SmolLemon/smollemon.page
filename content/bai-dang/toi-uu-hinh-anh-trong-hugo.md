@@ -7,7 +7,7 @@ tag = [
 	'Hugo',
 	'Web',
 ]
-topic = 'Hugo'
+danh-muc = 'Hugo'
 [params]
 	article = true
 	math = false

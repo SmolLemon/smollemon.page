@@ -4,12 +4,11 @@ date = 2025-02-27T00:00:00+07:00
 description = 'Bài viết đầu tiên giới thiệu về trang web của Smol Lemon'
 tag = [
 	'Blog',
-	'DIY',
 	'Hugo',
 	'PicoCSS',
 	'Web',
 ]
-topic = 'Web'
+danh-muc = 'Web'
 [params]
 	article = true
 	math = false
@@ -24,6 +23,6 @@ Trang web của mình sử dụng theme Hugo do chính mình tự viết (vì kh
 
 Trong thời gian tới, mình sẽ đăng thêm một số bài viết, đồng thời cải thiện trang web trong quá trình thành thạo Hugo.
 
-Bạn có thể xem qua các dự án khác của mình ở các bài viết về [dự án]({{< ref "/project/" >}}). 
+Bạn có thể xem qua các dự án khác của mình ở các bài viết về [dự án]({{< ref "/du-an/" >}}). 
 
 Cảm ơn bạn vì đã dành thời gian đọc bài viết này!

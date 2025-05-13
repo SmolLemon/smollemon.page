@@ -444,7 +444,7 @@ section {
     max-width: 950px;
   }
   .container {
-    max-width: 950px;
+    max-width: 750px;
   }
 }
 @media (min-width: 1280px) {

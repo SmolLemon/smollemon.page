@@ -65,31 +65,10 @@ iframe{
   border-radius: var(--pico-border-radius);
 }
 
-.center-img{
-  margin-bottom: 1rem;
-}
-
-.center-img > p{
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-}
-content > center > img{
-  border-radius: var(--pico-border-radius);
-}
-
 .site-title{
   text-decoration: none !important; 
   font-size: 2rem; 
   font-weight: 900;
-}
-
-content > p > img {
-  margin-bottom: 1rem;
-  border-radius: var(--pico-border-radius);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
 }
 
 @media (max-width: 1024px) {
@@ -139,4 +118,15 @@ content > p > img {
 .avatar{
   border-radius: 50%;
   margin: 1rem;
+}
+
+figure{
+  margin-bottom: 1rem !important;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--pico-border-radius);
 }
