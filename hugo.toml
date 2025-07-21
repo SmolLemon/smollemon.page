@@ -97,7 +97,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
   name = "Liên lạc"
-  url = "/contact/"
+  url = "/lien-lac/"
   weight = 50
 
   [[menu.main]]
